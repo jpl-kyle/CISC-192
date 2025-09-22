@@ -124,5 +124,5 @@ int main() {
 ```
 # The video
 ```
-url
+https://sdccd.us-west-2.instructuremedia.com/embed/3bc15223-a0df-437f-b878-7e05376d0753
 ```
