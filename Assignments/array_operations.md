@@ -9,6 +9,10 @@
 
 My biggest challenge was my initial approach to the problem. I first tried putting in the first number to the array, and I realized that would make my code much harder to read, so I had to change my approach to put all the numbers in the array in one go.
 
+Also, after testing out the program a bit more after finishing all my weekly assignments just now, I noticed a bug in the ascending sort and realized it was because I assumed incorrectly about the indexing for the for loop. I put 4 instead of 5 when copying the arrays, thinking it would copy all values. (j<4 - i is not the same as i<5.) I think the mistake came from confusion from learning how to make bubble sort. I definitely have to be more careful polishing up code.
+
+I also added missing messages from the ascending and descending methods.
+
 ```cpp
 cout << "Number #1: ";
     if (!(cin >> numInput)) {  // Check if the first number is a number.
@@ -35,6 +39,11 @@ cout << "Number #1: ";
     numberArray[0] = numInput; // puts the first number in the array
     } 
 ```
+Also, I had a large problem that made me panic if I wcould get this program to work. Turns out, it was my VS Code compiler, because when I put my code into an online compiler, it worked just as expected. These are the error codes when I try to compile with VS Code.
+```
+
+```
+
 I really liked how this assignment combined all the things I learned up until now, and I was able to put some stuff I learned in java programming here, like while loops. I think that it is slightly easier to implement the while loops in Java, but I might be misremembering. What do you think?
 
 This was a very good refresher to using arrays in programming. Thank you! Should I include more comments next time?
@@ -73,7 +82,6 @@ int main() {
                  cerr << "Input cannot be negative." << '\n'; // Return an error if it is a negative number.
                  continue;
             }
-            
             bool dupe = false;
             for (int j = 0; j < i; ++j) { // looks through the array based on how many numbers are in it.
                 if (numberArray[j] == numInput) { // if the inputted number matches with a number in an array
@@ -115,7 +123,7 @@ int main() {
     switch (static_cast<Menu>(choice)) {
         case Menu::Ascending: {
             int* ascendingArray = new int[5];
-            for (int i = 0; i < 4; ++i) { // copy array
+            for (int i = 0; i < 5; ++i) { // copy array
                 ascendingArray[i] = numberArray[i];
             }
             for (int i = 0; i < 4; i++) {
@@ -127,6 +135,8 @@ int main() {
                     }
                 }
             }
+            
+            cout << "Array sorted from least to greatest: ";
             for (int i = 0; i < 5; ++i) {
                 cout << ascendingArray[i] << " ";
             }
@@ -135,7 +145,7 @@ int main() {
         }
         case Menu::Descending: {
             int* descendingArray = new int[5];
-            for (int i = 0; i < 4; ++i) { // copy array
+            for (int i = 0; i < 5; ++i) { // copy array
                 descendingArray[i] = numberArray[i];
             }
             for (int i = 0; i < 4; i++) { // bubble sort
@@ -147,6 +157,7 @@ int main() {
                     }
                 }
             }
+            cout << "Array sorted from greatest to least: ";
             for (int i = 0; i < 5; ++i) {
                 cout << descendingArray[i] << " ";
             }
@@ -185,5 +196,4 @@ int main() {
     delete[] numberArray;
     return 0;
 }
-
 ```
