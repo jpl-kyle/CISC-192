@@ -1,3 +1,10 @@
+```cpp
+// Name: John Pierre Lucas
+// Course: CISC 192 - C++ Programming
+// Date: 11/02/2025
+// Assignment: Non-Duplicated Integer Array Operations
+```
+
 # Challenges faced
 
 My biggest challenge was my initial approach to the problem. I first tried putting in the first number to the array, and I realized that would make my code much harder to read, so I had to change my approach to put all the numbers in the array in one go.
