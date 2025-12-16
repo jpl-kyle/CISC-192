@@ -14,6 +14,8 @@ Delete was used in the exit switch case because I do not want to `return 0;` bef
 
 ### 3. Explanation of ownership in each design.  
 
+A lot of the stuff I wrote for this assignment came from my past assignments, and because of my time crunch, I put very few comments, especially on part B
+
 I created guidelines for myself to remember how the pointers interacted with the memory addresses of each task, for getID(), getDescription(), isCompleted(), I treated them as setters. For completeTask() and print task, I went back to my habit of using if-else statements because I am more comfortable with them. For Part B, I kept the design mostly the same, except printTask() acts more like listTask(), and I also had more time so I heavily relied on youtube videos and the lessons you gave in the class so I can fulfill my vision of the program. It is a little bit messy with its implementation because I focused more on functionality than structure. If I could, I would have definitely given myself the whole week to work on this project rather than the weekend.
 
 ### 4. Which pointer method is safest and why.
